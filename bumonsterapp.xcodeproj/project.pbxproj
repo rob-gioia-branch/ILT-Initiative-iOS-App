@@ -36,6 +36,15 @@
 		0E69BBC12AD0648600FE870F /* BranchSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 0E69BBC02AD0648600FE870F /* BranchSDK */; };
 		0E69BBC32AD0661200FE870F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBC22AD0661200FE870F /* Product.swift */; };
 		0E69BBC52AD0667D00FE870F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBC42AD0667D00FE870F /* Constants.swift */; };
+		0E69BBC82AD0691C00FE870F /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBC72AD0691C00FE870F /* CoreServices.framework */; };
+		0E69BBCA2AD0692300FE870F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBC92AD0692300FE870F /* SystemConfiguration.framework */; };
+		0E69BBCC2AD0692900FE870F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBCB2AD0692900FE870F /* CoreTelephony.framework */; };
+		0E69BBCE2AD0693000FE870F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBCD2AD0693000FE870F /* WebKit.framework */; };
+		0E69BBD02AD0693700FE870F /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBCF2AD0693700FE870F /* CoreSpotlight.framework */; };
+		0E69BBD22AD0693D00FE870F /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBD12AD0693D00FE870F /* AdServices.framework */; };
+		0E69BBD42AD0694500FE870F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBD32AD0694500FE870F /* AdSupport.framework */; };
+		0E69BBD62AD0694B00FE870F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBD52AD0694B00FE870F /* StoreKit.framework */; };
+		0E69BBD82AD0695100FE870F /* LinkPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69BBD72AD0695100FE870F /* LinkPresentation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +82,15 @@
 		0E69BBBE2AD0643000FE870F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E69BBC22AD0661200FE870F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0E69BBC42AD0667D00FE870F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E69BBC72AD0691C00FE870F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		0E69BBC92AD0692300FE870F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0E69BBCB2AD0692900FE870F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0E69BBCD2AD0693000FE870F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0E69BBCF2AD0693700FE870F /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		0E69BBD12AD0693D00FE870F /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		0E69BBD32AD0694500FE870F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0E69BBD52AD0694B00FE870F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0E69BBD72AD0695100FE870F /* LinkPresentation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkPresentation.framework; path = System/Library/Frameworks/LinkPresentation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +98,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E69BBD62AD0694B00FE870F /* StoreKit.framework in Frameworks */,
+				0E69BBCE2AD0693000FE870F /* WebKit.framework in Frameworks */,
+				0E69BBD42AD0694500FE870F /* AdSupport.framework in Frameworks */,
+				0E69BBCC2AD0692900FE870F /* CoreTelephony.framework in Frameworks */,
+				0E69BBD02AD0693700FE870F /* CoreSpotlight.framework in Frameworks */,
 				0E69BBC12AD0648600FE870F /* BranchSDK in Frameworks */,
+				0E69BBD82AD0695100FE870F /* LinkPresentation.framework in Frameworks */,
+				0E69BBCA2AD0692300FE870F /* SystemConfiguration.framework in Frameworks */,
+				0E69BBC82AD0691C00FE870F /* CoreServices.framework in Frameworks */,
+				0E69BBD22AD0693D00FE870F /* AdServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +119,7 @@
 			children = (
 				0E69BB782AD01F9100FE870F /* bumonsterapp */,
 				0E69BB772AD01F9100FE870F /* Products */,
+				0E69BBC62AD0691B00FE870F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +217,22 @@
 				0E69BB9F2AD062D200FE870F /* ProductListing.swift */,
 			);
 			path = TabViews;
+			sourceTree = "<group>";
+		};
+		0E69BBC62AD0691B00FE870F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BBD72AD0695100FE870F /* LinkPresentation.framework */,
+				0E69BBD52AD0694B00FE870F /* StoreKit.framework */,
+				0E69BBD32AD0694500FE870F /* AdSupport.framework */,
+				0E69BBD12AD0693D00FE870F /* AdServices.framework */,
+				0E69BBCF2AD0693700FE870F /* CoreSpotlight.framework */,
+				0E69BBCD2AD0693000FE870F /* WebKit.framework */,
+				0E69BBCB2AD0692900FE870F /* CoreTelephony.framework */,
+				0E69BBC92AD0692300FE870F /* SystemConfiguration.framework */,
+				0E69BBC72AD0691C00FE870F /* CoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
