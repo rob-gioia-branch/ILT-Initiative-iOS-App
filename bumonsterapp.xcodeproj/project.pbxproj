@@ -11,6 +11,31 @@
 		0E69BB7C2AD01F9100FE870F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB7B2AD01F9100FE870F /* ContentView.swift */; };
 		0E69BB7E2AD01F9200FE870F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E69BB7D2AD01F9200FE870F /* Assets.xcassets */; };
 		0E69BB812AD01F9200FE870F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E69BB802AD01F9200FE870F /* Preview Assets.xcassets */; };
+		0E69BB8D2AD0620400FE870F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB8C2AD0620400FE870F /* SwiftUIView.swift */; };
+		0E69BB8F2AD0621F00FE870F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB8E2AD0621F00FE870F /* HomeViewModel.swift */; };
+		0E69BB912AD0623500FE870F /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB902AD0623500FE870F /* LoginPageModel.swift */; };
+		0E69BB962AD0625D00FE870F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB952AD0625D00FE870F /* Home.swift */; };
+		0E69BB982AD0627500FE870F /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB972AD0627500FE870F /* ProfilePage.swift */; };
+		0E69BB9C2AD062A800FE870F /* LikedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB9B2AD062A800FE870F /* LikedPage.swift */; };
+		0E69BB9E2AD062BE00FE870F /* CartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB9D2AD062BE00FE870F /* CartPage.swift */; };
+		0E69BBA02AD062D200FE870F /* ProductListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BB9F2AD062D200FE870F /* ProductListing.swift */; };
+		0E69BBA22AD062E800FE870F /* StaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBA12AD062E800FE870F /* StaggeredGrid.swift */; };
+		0E69BBA42AD062FE00FE870F /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBA32AD062FE00FE870F /* OnBoardingPage.swift */; };
+		0E69BBA62AD0631300FE870F /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBA52AD0631300FE870F /* LoginPage.swift */; };
+		0E69BBA82AD0632F00FE870F /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBA72AD0632F00FE870F /* ProductView.swift */; };
+		0E69BBAA2AD0634100FE870F /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBA92AD0634100FE870F /* CustomCorners.swift */; };
+		0E69BBAC2AD0635300FE870F /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBAB2AD0635300FE870F /* MainPage.swift */; };
+		0E69BBAE2AD0636600FE870F /* MoreProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBAD2AD0636600FE870F /* MoreProductsView.swift */; };
+		0E69BBB02AD0637B00FE870F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBAF2AD0637B00FE870F /* SearchView.swift */; };
+		0E69BBB22AD0639000FE870F /* OrderConfirmationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBB12AD0639000FE870F /* OrderConfirmationPage.swift */; };
+		0E69BBB42AD063A300FE870F /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBB32AD063A300FE870F /* ThemeButton.swift */; };
+		0E69BBB62AD063B600FE870F /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBB52AD063B600FE870F /* AppLogo.swift */; };
+		0E69BBB82AD063CA00FE870F /* ProductDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBB72AD063CA00FE870F /* ProductDetailsPage.swift */; };
+		0E69BBBA2AD063E500FE870F /* ReferAFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBB92AD063E500FE870F /* ReferAFriendView.swift */; };
+		0E69BBBC2AD063F900FE870F /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBBB2AD063F900FE870F /* BackButton.swift */; };
+		0E69BBC12AD0648600FE870F /* BranchSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 0E69BBC02AD0648600FE870F /* BranchSDK */; };
+		0E69BBC32AD0661200FE870F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBC22AD0661200FE870F /* Product.swift */; };
+		0E69BBC52AD0667D00FE870F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69BBC42AD0667D00FE870F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +44,35 @@
 		0E69BB7B2AD01F9100FE870F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E69BB7D2AD01F9200FE870F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E69BB802AD01F9200FE870F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E69BB8C2AD0620400FE870F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		0E69BB8E2AD0621F00FE870F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0E69BB902AD0623500FE870F /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
+		0E69BB922AD0624A00FE870F /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "../../../../Downloads/monsterapp 6/monsterapp/Fonts/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		0E69BB932AD0624B00FE870F /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "../../../../Downloads/monsterapp 6/monsterapp/Fonts/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		0E69BB942AD0624B00FE870F /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../../../Downloads/monsterapp 6/monsterapp/Fonts/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		0E69BB952AD0625D00FE870F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0E69BB972AD0627500FE870F /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		0E69BB9B2AD062A800FE870F /* LikedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPage.swift; sourceTree = "<group>"; };
+		0E69BB9D2AD062BE00FE870F /* CartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPage.swift; sourceTree = "<group>"; };
+		0E69BB9F2AD062D200FE870F /* ProductListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListing.swift; sourceTree = "<group>"; };
+		0E69BBA12AD062E800FE870F /* StaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGrid.swift; sourceTree = "<group>"; };
+		0E69BBA32AD062FE00FE870F /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		0E69BBA52AD0631300FE870F /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		0E69BBA72AD0632F00FE870F /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		0E69BBA92AD0634100FE870F /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		0E69BBAB2AD0635300FE870F /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		0E69BBAD2AD0636600FE870F /* MoreProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProductsView.swift; sourceTree = "<group>"; };
+		0E69BBAF2AD0637B00FE870F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0E69BBB12AD0639000FE870F /* OrderConfirmationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationPage.swift; sourceTree = "<group>"; };
+		0E69BBB32AD063A300FE870F /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
+		0E69BBB52AD063B600FE870F /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
+		0E69BBB72AD063CA00FE870F /* ProductDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsPage.swift; sourceTree = "<group>"; };
+		0E69BBB92AD063E500FE870F /* ReferAFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferAFriendView.swift; sourceTree = "<group>"; };
+		0E69BBBB2AD063F900FE870F /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		0E69BBBD2AD0640C00FE870F /* bumonsterapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bumonsterapp.entitlements; sourceTree = "<group>"; };
+		0E69BBBE2AD0643000FE870F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0E69BBC22AD0661200FE870F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0E69BBC42AD0667D00FE870F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E69BBC12AD0648600FE870F /* BranchSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +106,16 @@
 		0E69BB782AD01F9100FE870F /* bumonsterapp */ = {
 			isa = PBXGroup;
 			children = (
+				0E69BBBE2AD0643000FE870F /* Info.plist */,
+				0E69BBBD2AD0640C00FE870F /* bumonsterapp.entitlements */,
+				0E69BB8A2AD0209200FE870F /* View */,
+				0E69BB892AD0208900FE870F /* Fonts */,
+				0E69BB882AD0207D00FE870F /* ViewModel */,
+				0E69BB872AD0207500FE870F /* Model */,
 				0E69BB792AD01F9100FE870F /* bumonsterappApp.swift */,
 				0E69BB7B2AD01F9100FE870F /* ContentView.swift */,
 				0E69BB7D2AD01F9200FE870F /* Assets.xcassets */,
+				0E69BBC42AD0667D00FE870F /* Constants.swift */,
 				0E69BB7F2AD01F9200FE870F /* Preview Content */,
 			);
 			path = bumonsterapp;
@@ -65,6 +127,68 @@
 				0E69BB802AD01F9200FE870F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E69BB872AD0207500FE870F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BBC22AD0661200FE870F /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E69BB882AD0207D00FE870F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BB8C2AD0620400FE870F /* SwiftUIView.swift */,
+				0E69BB8E2AD0621F00FE870F /* HomeViewModel.swift */,
+				0E69BB902AD0623500FE870F /* LoginPageModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E69BB892AD0208900FE870F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BB932AD0624B00FE870F /* Raleway-Bold.ttf */,
+				0E69BB942AD0624B00FE870F /* Raleway-Regular.ttf */,
+				0E69BB922AD0624A00FE870F /* Raleway-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0E69BB8A2AD0209200FE870F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BB8B2AD0209D00FE870F /* TabViews */,
+				0E69BBA12AD062E800FE870F /* StaggeredGrid.swift */,
+				0E69BBA32AD062FE00FE870F /* OnBoardingPage.swift */,
+				0E69BBA52AD0631300FE870F /* LoginPage.swift */,
+				0E69BBA72AD0632F00FE870F /* ProductView.swift */,
+				0E69BBA92AD0634100FE870F /* CustomCorners.swift */,
+				0E69BBAB2AD0635300FE870F /* MainPage.swift */,
+				0E69BBAD2AD0636600FE870F /* MoreProductsView.swift */,
+				0E69BBAF2AD0637B00FE870F /* SearchView.swift */,
+				0E69BBB12AD0639000FE870F /* OrderConfirmationPage.swift */,
+				0E69BBB32AD063A300FE870F /* ThemeButton.swift */,
+				0E69BBB52AD063B600FE870F /* AppLogo.swift */,
+				0E69BBB72AD063CA00FE870F /* ProductDetailsPage.swift */,
+				0E69BBB92AD063E500FE870F /* ReferAFriendView.swift */,
+				0E69BBBB2AD063F900FE870F /* BackButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E69BB8B2AD0209D00FE870F /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				0E69BB952AD0625D00FE870F /* Home.swift */,
+				0E69BB972AD0627500FE870F /* ProfilePage.swift */,
+				0E69BB9B2AD062A800FE870F /* LikedPage.swift */,
+				0E69BB9D2AD062BE00FE870F /* CartPage.swift */,
+				0E69BB9F2AD062D200FE870F /* ProductListing.swift */,
+			);
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +207,9 @@
 			dependencies = (
 			);
 			name = bumonsterapp;
+			packageProductDependencies = (
+				0E69BBC02AD0648600FE870F /* BranchSDK */,
+			);
 			productName = bumonsterapp;
 			productReference = 0E69BB762AD01F9100FE870F /* bumonsterapp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 0E69BB6D2AD01F9100FE870F;
+			packageReferences = (
+				0E69BBBF2AD0648600FE870F /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */,
+			);
 			productRefGroup = 0E69BB772AD01F9100FE870F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +267,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E69BB9C2AD062A800FE870F /* LikedPage.swift in Sources */,
+				0E69BB9E2AD062BE00FE870F /* CartPage.swift in Sources */,
+				0E69BBB62AD063B600FE870F /* AppLogo.swift in Sources */,
+				0E69BBA22AD062E800FE870F /* StaggeredGrid.swift in Sources */,
+				0E69BBA02AD062D200FE870F /* ProductListing.swift in Sources */,
+				0E69BBAE2AD0636600FE870F /* MoreProductsView.swift in Sources */,
+				0E69BBAA2AD0634100FE870F /* CustomCorners.swift in Sources */,
+				0E69BBC52AD0667D00FE870F /* Constants.swift in Sources */,
+				0E69BBC32AD0661200FE870F /* Product.swift in Sources */,
+				0E69BBA82AD0632F00FE870F /* ProductView.swift in Sources */,
+				0E69BBBC2AD063F900FE870F /* BackButton.swift in Sources */,
 				0E69BB7C2AD01F9100FE870F /* ContentView.swift in Sources */,
+				0E69BB912AD0623500FE870F /* LoginPageModel.swift in Sources */,
+				0E69BBA62AD0631300FE870F /* LoginPage.swift in Sources */,
+				0E69BBB02AD0637B00FE870F /* SearchView.swift in Sources */,
 				0E69BB7A2AD01F9100FE870F /* bumonsterappApp.swift in Sources */,
+				0E69BBA42AD062FE00FE870F /* OnBoardingPage.swift in Sources */,
+				0E69BBAC2AD0635300FE870F /* MainPage.swift in Sources */,
+				0E69BBBA2AD063E500FE870F /* ReferAFriendView.swift in Sources */,
+				0E69BBB82AD063CA00FE870F /* ProductDetailsPage.swift in Sources */,
+				0E69BB982AD0627500FE870F /* ProfilePage.swift in Sources */,
+				0E69BB8D2AD0620400FE870F /* SwiftUIView.swift in Sources */,
+				0E69BB962AD0625D00FE870F /* Home.swift in Sources */,
+				0E69BB8F2AD0621F00FE870F /* HomeViewModel.swift in Sources */,
+				0E69BBB22AD0639000FE870F /* OrderConfirmationPage.swift in Sources */,
+				0E69BBB42AD063A300FE870F /* ThemeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +418,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bumonsterapp/bumonsterapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bumonsterapp/Preview Content\"";
 				DEVELOPMENT_TEAM = 66862GF39B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bumonsterapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +449,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bumonsterapp/bumonsterapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bumonsterapp/Preview Content\"";
 				DEVELOPMENT_TEAM = 66862GF39B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bumonsterapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +497,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E69BBBF2AD0648600FE870F /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BranchMetrics/ios-branch-sdk-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E69BBC02AD0648600FE870F /* BranchSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E69BBBF2AD0648600FE870F /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */;
+			productName = BranchSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E69BB6E2AD01F9100FE870F /* Project object */;
 }
