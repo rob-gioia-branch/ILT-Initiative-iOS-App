@@ -20,6 +20,10 @@ struct ProductDetailsPage: View {
     // Shared Data Model...
     @EnvironmentObject var sharedData: SharedDataModel
     @EnvironmentObject var homeData: HomeViewModel
+    @StateObject var deepLinkVM: DeepLinkViewModel = DeepLinkViewModel()
+
+    @State private var isShareSheetPresented = false
+    @State private var shareLink: String?
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -87,12 +91,18 @@ struct ProductDetailsPage: View {
             }
             
             Button {
-                didTapShareDeepLink()
+                deepLinkVM.createDeepLink(product: product)
+                deepLinkVM.dataBinding = {
+                    self.isShareSheetPresented.toggle()
+                }
+                
             } label: {
                 Image(systemName: "square.and.arrow.up")
                     .renderingMode(.template)
                     .foregroundColor(Constants.Colors.themeBlue)
                     .font(.title)
+            }.sheet(isPresented: $isShareSheetPresented) {
+                ActivityViewController(activityItems: ["my fav monster: \(deepLinkVM.shareUrl ?? "")"])
             }
             
             Button {
@@ -193,52 +203,10 @@ struct ProductDetailsPage: View {
         event.logEvent() // Log the event.
     }
     
-    
-    // Branch.io - Set Branch Universal Object for product
-    func didTapShareDeepLink() {
-        // Set BUO (Branch Universal Object) Properties
-        buo.title = product.title
-        buo.contentDescription = product.subtitle
-        buo.imageUrl = "https://branch.io/img/logo-dark.svg"
-        buo.publiclyIndex = true
-        buo.locallyIndex = true
-        buo.canonicalUrl = "https://www.branch.io/\(product.productId)"
-        
-        // Branch.io - Set Deep Link Properties
-        
-        lp.channel = "In-app"
-        lp.feature = "sharing"
-        lp.campaign = "messaging"
-        lp.addControlParam("$desktop_url", withValue: "https://help.branch.io/")
-        lp.addControlParam("$ios_url", withValue: "https://help.branch.io/developers-hub/docs/ios-sdk-overview")
-        lp.addControlParam("$android_url", withValue: "https://help.branch.io/developers-hub/docs/android-sdk-overview")
-        lp.addControlParam("$canonical_url", withValue: "https://www.branch.io/\(product.productId)")
-        
-        buo.getShortUrl(with: lp) { url, error in
-            print(url ?? "")
-        }
-        
-        // Branch.io - Call Share Sheet
-                buo.showShareSheet(with: lp, andShareText: "Check out this Branch Monster", from: UIApplication.shared.windows.first?.rootViewController) { (string, bool, error) in
-                    guard error == nil else { return }
-                // String = Sharing Method (Messages || CopyToPasteboard || Mail || etc)
-                // Bool = Share Completed/Not Completed
-                // Error = Sharing Error
-                // String = Sharing Method (Messages || CopyToPasteboard || Mail || etc)
-                // Bool = Share Completed/Not Completed
-                // Error = Sharing Error
-                if bool {
-                    // Share Sheet sent
-                    print("Share Sheet Completed")
-                }
-            }
-        }
-    }
-    
     struct ProductDetails_Previews: PreviewProvider {
         static var previews: some View {
             ProductDetailsPage(product: Product(type: .ECOMMERCE, title: "Branch Product", subtitle: "This is a test product", productImage: "ECOMMERCE-1"))
                 .environmentObject(SharedDataModel())
         }
     }
-
+}
