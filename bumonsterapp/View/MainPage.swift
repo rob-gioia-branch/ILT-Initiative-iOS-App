@@ -27,18 +27,24 @@ struct MainPage: View {
     var body: some View {
         
         VStack {
+            TabBarView(currentTab: $currentTab)
+
             // Tab View...
             TabView(selection: $currentTab) {
                 ReferAFriendView()
                     .environmentObject(sharedData)
                     .tag(Tab.Home)
-
+                
                 ProductListing()
                     .environmentObject(sharedData)
-                    .tag(Tab.Menu)
+                    .tag(Tab.Shop)
 
                 ProfilePage()
                     .tag(Tab.Profile)
+                
+                ShareView()
+                    .environmentObject(sharedData)
+                    .tag(Tab.Share)
 
                 /* Old Code
                 LikedPage()
@@ -49,8 +55,6 @@ struct MainPage: View {
                     .tag(Tab.Cart)
                  */
             }
-
-            TabBarView(currentTab: $currentTab)
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
         .onAppear{
@@ -95,7 +99,8 @@ enum Tab: String,CaseIterable{
     // Raw Value must be image Name in asset..
     case Home = "Home"
     case Profile = "Profile"
-    case Menu = "Menu"
+    case Shop = "Shop"
+    case Share = "Share"
     
     /* Old Code
     //case Liked = "Liked"
