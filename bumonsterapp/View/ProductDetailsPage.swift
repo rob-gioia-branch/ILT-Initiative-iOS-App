@@ -21,9 +21,12 @@ struct ProductDetailsPage: View {
     @EnvironmentObject var sharedData: SharedDataModel
     @EnvironmentObject var homeData: HomeViewModel
     @StateObject var deepLinkVM: DeepLinkViewModel = DeepLinkViewModel()
+    @StateObject private var branchEvents = BranchEvents()
 
     @State private var isShareSheetPresented = false
     @State private var shareLink: String?
+    @State private var showToast = false
+    @State private var toastMessage = ""
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -83,11 +86,13 @@ struct ProductDetailsPage: View {
         HStack(spacing: 12) {
             ThemeButton(title: "Add to cart", fontSize: 18, weight: .medium /*disabled: isAddedToCart()*/) {
                 //addToCart()
-                branchEventAddToCart()
+                branchEvents.trackAddToCartEvent()
+                showToast(message: "ADD_TO_CART event triggered")
             }
             
             ThemeButton(title: "Buy now", fontSize: 18, weight: .medium) {
-                branchEventPurchase()
+                branchEvents.trackPurchaseEvent()
+                showToast(message: "PURCHASE event triggered")
             }
             
             Button {
@@ -114,6 +119,13 @@ struct ProductDetailsPage: View {
                     .font(.title)
             }
         }
+        .overlay(
+            ToastView(message: toastMessage, isPresented: $showToast)
+                .opacity(showToast ? 1 : 0)
+                .onChange(of: showToast) { newValue in
+                    withAnimation(.easeInOut(duration: 0.2)) {}
+                }
+        )
         .padding(.horizontal)
     }
     
@@ -159,48 +171,14 @@ struct ProductDetailsPage: View {
             sharedData.cartProducts.append(product)
         }
     }
-    // Branch.io - Track Event - Add To Cart
-    func branchEventAddToCart(){
-        
-        /*
-         // Create a BranchUniversalObject with your content data:
-         let branchUniversalObject = BranchUniversalObject.init()
-         
-         // ...add data to the branchUniversalObject as needed...
-         branchUniversalObject.title               = product.title
-         
-         branchUniversalObject.contentMetadata.contentSchema     = .commerceProduct
-         branchUniversalObject.contentMetadata.quantity          = 1
-         branchUniversalObject.contentMetadata.price             = product.sellingPrice
-         branchUniversalObject.contentMetadata.currency          = .USD
-         branchUniversalObject.contentMetadata.productName       = product.title
-         branchUniversalObject.contentMetadata.productVariant    = product.subtitle
-         */
-        
-        // Create a BranchEvent:
-        let event = BranchEvent.standardEvent(.addToCart)
-        
-        // Add the BranchUniversalObject with the content (do not add an empty branchUniversalObject):
-        //event.contentItems     = [ branchUniversalObject ]
-        
-        // Add relevant event data:
-        event.alias            = "Add To Cart"
-        //event.currency         = .USD
-        event.eventDescription = "Monster Added to Cart"
-        event.logEvent() // Log the event.
-    }
     
-    
-    // Branch.io - Track Event - Purchase
-    func branchEventPurchase(){
+    func showToast(message: String) {
+        toastMessage = message
+        showToast.toggle()
         
-        // Create a BranchEvent:
-        let event = BranchEvent.standardEvent(.purchase)
-        
-        // Add relevant event data:
-        event.alias            = "Purchase"
-        event.eventDescription = "Monster Purchased"
-        event.logEvent() // Log the event.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            showToast.toggle()
+        }
     }
     
     struct ProductDetails_Previews: PreviewProvider {

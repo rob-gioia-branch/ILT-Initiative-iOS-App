@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ReferAFriendView: View {
     @Environment (\.dismiss) var dismiss
+    
+    @StateObject var deepLinkVM: DeepLinkViewModel = DeepLinkViewModel()
+
+    @State private var isShareSheetPresented = false
+    @State private var shareLink: String?
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             //BackButton { dismiss() }
@@ -26,8 +32,15 @@ struct ReferAFriendView: View {
                 .fontWeight(.bold)
             Text("Monsters of every type to delight and cause a smile")
             ThemeButton(title: "Refer a friend") {
-                //TODO: Add action
                 branchEventReferAFriend()
+
+                //TODO: Add action
+                deepLinkVM.createDeepLink()
+                deepLinkVM.dataBinding = {
+                    self.isShareSheetPresented.toggle()
+                }
+            }.sheet(isPresented: $isShareSheetPresented) {
+                ActivityViewController(activityItems: ["Refer to this code for a cool app: \(deepLinkVM.shareUrl ?? "")"])
             }
             Spacer()
         }

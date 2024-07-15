@@ -111,15 +111,27 @@ enum Tab: String,CaseIterable{
 
 struct TabBarView: View {
     @Binding var currentTab: Tab
+    
+    @StateObject var deepLinkVM: DeepLinkViewModel = DeepLinkViewModel()
+
+    @State private var isShareSheetPresented = false
+    @State private var shareLink: String?
+    
     var body: some View {
         HStack(spacing: 0){
             ForEach(Tab.allCases,id: \.self){ tab in
 
                 Button {
                     // updating tab...
-                    currentTab = tab
+                    if tab.rawValue == "Share" {
+                        deepLinkVM.createDeepLink()
+                        deepLinkVM.dataBinding = {
+                            self.isShareSheetPresented.toggle()
+                        }
+                    } else {
+                        currentTab = tab
+                    }
                 } label: {
-
                     Image(tab.rawValue)
                         .resizable()
                         .renderingMode(.template)
@@ -140,6 +152,8 @@ struct TabBarView: View {
                         )
                         .frame(maxWidth: .infinity)
                         .foregroundColor(currentTab == tab ? Color("ThemeButtonColor") : Color.black.opacity(0.3))
+                }.sheet(isPresented: $isShareSheetPresented) {
+                    ActivityViewController(activityItems: ["Here's the monster app: \(deepLinkVM.shareUrl ?? "")"])
                 }
             }
         }

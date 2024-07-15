@@ -4,8 +4,10 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:monsterapp.app.link</string>
-		<string>applinks:monsterapp-alternate.app.link</string>
+		<string>applinks:bu-monsters.test-app.link</string>
+		<string>applinks:bu-monsters-alternate.test-app.link</string>
+		<string>applinks:bu-monsters-alternate.app.link</string>
+		<string>applinks:bu-monsters.app.link</string>
 	</array>
 </dict>
 </plist>

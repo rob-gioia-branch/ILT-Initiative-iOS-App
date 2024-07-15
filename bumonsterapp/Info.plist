@@ -8,7 +8,19 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>io.branch.Master-Proserve-iOS</string>
+			<string>com.anishsomani.bumonsterapp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>bu-monsters</string>
+				<string>https</string>
+				<string>http</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.anishsomani.bumonsterapp</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>http</string>
@@ -31,7 +43,5 @@
 		<string>bu-monsters-alternate.test-app.link</string>
 		<string>bu-monsters</string>
 	</array>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>Allow tracking to improve our services and show relevant advertisements.</string>
 </dict>
 </plist>

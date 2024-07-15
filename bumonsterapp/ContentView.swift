@@ -11,15 +11,14 @@ import AppTrackingTransparency
 import AdSupport
 
 struct ContentView: View {
-    
+
     // Log Status..
     @AppStorage("log_Status") var log_Status: Bool = false
     var body: some View {
         Group {
-            if log_Status{
+            if log_Status {
                 MainPage()
-            }
-            else{
+            } else {
                 OnBoardingPage()
             }
         }.onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in

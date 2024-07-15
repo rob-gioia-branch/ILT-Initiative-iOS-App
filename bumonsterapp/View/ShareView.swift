@@ -10,28 +10,12 @@ import SwiftUI
 
 struct ShareView: View {
     @Environment (\.dismiss) var dismiss
+    
+    @StateObject private var branchEvents = BranchEvents()
+
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
-            //BackButton { dismiss() }
-//            Spacer()
-//                .frame(height: 20)
-//            HStack {
-//                Spacer()
-//                AppLogo()
-//                Spacer()
-//            }
-//            Spacer()
-//                .frame(height: 30)
-//            Text("Branch University MonsterApp")
-//                .font(.largeTitle)
-//                .fontWeight(.bold)
-//            Text("Monsters of every type to delight and cause a smile")
-//            ThemeButton(title: "Refer a friend") {
-//                //TODO: Add action
-//                //TODO: Add share event
-////                branchEventReferAFriend()
-//            }
-//            Spacer()
+            branchEvents.trackStandardEvent(branchStandardEvent: BranchStandardEvent)
         }
         .ignoresSafeArea()
         .padding(.horizontal, 30)

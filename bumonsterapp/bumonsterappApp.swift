@@ -15,12 +15,29 @@ import UserNotifications
 @main
 struct testmonsterappbuApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    @AppStorage("hasLaunchedBefore") var hasLaunchedBefore: Bool = false
+    @State private var showWebView: Bool = false
+
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onOpenURL(perform: { url in
                     Branch.getInstance().handleDeepLink(url)
                 })
+                .onAppear {
+                    
+                    // Resetting for testing purposes
+                    hasLaunchedBefore = false
+
+                    if !hasLaunchedBefore {
+                        showWebView = true
+                        hasLaunchedBefore = true
+                    }
+                }
+                .sheet(isPresented: $showWebView) {
+                    WebViewContainer()
+                }
+            
         }
     }
 }
@@ -29,11 +46,24 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     let gcmMessageIDKey = "gcm.message_id"
     
+    var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         
         // Uncomment when Firebase package has been added to the project
         //FirebaseApp.configure()
         //Messaging.messaging().delegate = self
+        
+        let userDefaults = UserDefaults.standard
+                if userDefaults.bool(forKey: "hasLaunchedBefore") == false {
+                    userDefaults.set(true, forKey: "hasLaunchedBefore")
+                    userDefaults.synchronize()
+                    // This is the first launch
+                    if let window = window {
+                        window.rootViewController = WebViewController()
+                        window.makeKeyAndVisible()
+                    }
+                }
         
         
         if #available(iOS 10.0, *) {
