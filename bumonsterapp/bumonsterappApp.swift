@@ -26,8 +26,8 @@ struct testmonsterappbuApp: App {
                 })
                 .onAppear {
                     
-                    // Resetting for testing purposes
-                    hasLaunchedBefore = false
+                    // Reset this for testing purposes
+                    //hasLaunchedBefore = false
 
                     if !hasLaunchedBefore {
                         showWebView = true
