@@ -15,7 +15,6 @@ struct ShareView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
-            branchEvents.trackStandardEvent(branchStandardEvent: BranchStandardEvent)
         }
         .ignoresSafeArea()
         .padding(.horizontal, 30)
