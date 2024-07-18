@@ -8,7 +8,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.anishsomani.bumonstersapp2</string>
+			<string>com.branch.bumonsters</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>bu-monsters</string>
@@ -20,7 +20,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.anishsomani.bumonstersapp2</string>
+			<string>com.branch.bumonsters</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>http</string>
