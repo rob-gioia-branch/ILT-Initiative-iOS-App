@@ -29,6 +29,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>branch_key</key>
 	<dict>
 		<key>live</key>

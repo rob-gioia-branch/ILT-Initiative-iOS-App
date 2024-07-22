@@ -17,7 +17,7 @@ struct testmonsterappbuApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @AppStorage("hasLaunchedBefore") var hasLaunchedBefore: Bool = false
     @State private var showWebView: Bool = false
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -25,10 +25,9 @@ struct testmonsterappbuApp: App {
                     Branch.getInstance().handleDeepLink(url)
                 })
                 .onAppear {
-                    
                     // Reset this for testing purposes
-                    //hasLaunchedBefore = false
-
+                    // hasLaunchedBefore = false
+                    showWebView = false
                     if !hasLaunchedBefore {
                         showWebView = true
                         hasLaunchedBefore = true
@@ -37,7 +36,6 @@ struct testmonsterappbuApp: App {
                 .sheet(isPresented: $showWebView) {
                     WebViewContainer()
                 }
-            
         }
     }
 }
@@ -56,7 +54,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         let userDefaults = UserDefaults.standard
                 if userDefaults.bool(forKey: "hasLaunchedBefore") == false {
-                    userDefaults.set(true, forKey: "hasLaunchedBefore")
+//                    userDefaults.set(false, forKey: "hasLaunchedBefore")
                     userDefaults.synchronize()
                     // This is the first launch
                     if let window = window {
@@ -64,7 +62,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                         window.makeKeyAndVisible()
                     }
                 }
-        
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
